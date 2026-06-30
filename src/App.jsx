@@ -67,28 +67,27 @@ export default function Portfolio() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Use a free service like Web3Forms to receive emails
-    // Get your Access Key at https://web3forms.com/ (It's free)
-    const response = await fetch("https://api.web3forms.com/submit", {
+    // Using Formspree for reliable email delivery
+    const response = await fetch("https://formspree.io/f/xeeblrbj", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: "578b489b-987d-4f31-a923-f3413472f05c", // <-- Updated Access Key
         name: formData.name,
         email: formData.email,
         message: formData.message,
       }),
     });
 
-    const result = await response.json();
-    if (result.success) {
+    if (response.ok) {
       setSent(true);
       setFormData({ name: "", email: "", message: "" });
     } else {
-      alert("Something went wrong. Please try again.");
+      const result = await response.json();
+      console.log("Formspree Error:", result);
+      alert("Something went wrong: " + (result.errors?.[0]?.message || "Please try again."));
     }
   };
 
