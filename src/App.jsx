@@ -76,7 +76,7 @@ export default function Portfolio() {
         Accept: "application/json",
       },
       body: JSON.stringify({
-        access_key: "c82f82a4-cc9f-4bb3-a2f5-dd14c5eb4c6f", // <-- REPLACE THIS WITH YOUR KEY
+        access_key: "578b489b-987d-4f31-a923-f3413472f05c", // <-- Updated Access Key
         name: formData.name,
         email: formData.email,
         message: formData.message,
