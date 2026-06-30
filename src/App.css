@@ -195,8 +195,8 @@
 
 @media (max-width: 968px) {
   .hero-grid {
-    display: flex;
-    flex-direction: column-reverse;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 48px;
     text-align: center;
   }
@@ -495,6 +495,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 32px;
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .project-card {
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+  }
 }
 
 .project-card {

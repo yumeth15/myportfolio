@@ -235,7 +235,6 @@ export default function Portfolio() {
       <section id="projects" ref={setRef("projects")} className="section">
         <div className="container">
           <SectionLabel>Projects</SectionLabel>
-          <h2 className="section-heading">Selected work</h2>
           <div className="projects-grid">
             {PROJECTS.map((p) => (
               <ProjectCard key={p.title} project={p} />
