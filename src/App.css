@@ -195,11 +195,13 @@
 
 @media (max-width: 968px) {
   .hero-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
     gap: 48px;
     text-align: center;
   }
   .hero-visual {
+    display: flex;
     justify-content: center;
   }
   .hero-sub {
