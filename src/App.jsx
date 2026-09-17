@@ -320,7 +320,7 @@ export default function Portfolio() {
               {[
                 { name: "GitHub", url: "https://github.com/yumeth15", type: "github" },
                 { name: "LinkedIn", url: "https://www.linkedin.com/in/yumethnethdula/", type: "linkedin" },
-                { name: "Resume", url: "#", type: "resume" }
+                { name: "Resume", url: "/Yumeth_Nethdula_Resume.pdf", type: "resume" }
               ].map((link) => (
                 <a
                   key={link.name}
@@ -329,6 +329,7 @@ export default function Portfolio() {
                   aria-label={link.name}
                   target="_blank"
                   rel="noopener noreferrer"
+                  {...(link.type === "resume" ? { download: "Yumeth_Nethdula_Resume.pdf" } : {})}
                 >
                   <SocialIcon type={link.type} />
                 </a>
