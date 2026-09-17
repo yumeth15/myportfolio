@@ -5,13 +5,32 @@ import profilePic from "./assets/Gemini_Generated_Image_mgxfaimgxfaimgxf.png";
 const NAV_LINKS = ["About", "Skills", "Projects", "Contact"];
 
 const SKILLS = {
-  "Languages": ["JavaScript", "Dart", "Java", "C++"],
+  "Languages": ["JavaScript", "Dart", "Java", "C++","HTML"],
   "Frontend": ["React", "Flutter", "Tailwind CSS", "HTML/CSS"],
-  "Backend": ["Firebase", "Supabase", "PostgreSQL"],
-  "Tools & Cloud": ["Github", "Docker", "AWS", "CI/CD", "Linux"],
+  "Backend": ["Firebase", "Supabase", "PostgreSQL","Node.js", "Express.js", "MongoDB Atlas"],
+  "Tools & Cloud": ["Github", "Docker", "AWS", "CI/CD", "Linux", "Figma", "Render","Mongoose"],
 };
 
 const PROJECTS = [
+  {
+    title: "Job Tracker — Application Manager",
+    description:
+      "A full-stack web app for tracking and organizing job applications in one place. Users can register and log in securely, add applications, update status, search and filter, and view dashboard statistics.",
+    tech: [
+      "React",
+      "JavaScript",
+      "CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB Atlas",
+      "Mongoose",
+      "bcryptjs",
+      "REST API",
+      "Render",
+    ],
+    link: "https://github.com/yumeth15/job-application-tracker",
+    year: "2026",
+  },
   {
     title: "Career Buddy",
     description:
